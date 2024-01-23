@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="container">
+      <div class="todo-wrapper">
+        <div class="btn-add-wrapper">
+          <button id="open-task-form-btn" class="btn-new-task">
+            Add New Task
+          </button>
+        </div>
+        <!-- hidden клас в form немає -->
+        <form id="task-form" class="formClass hidden">
+          <div class="task-form__header">
+            <button
+              type="button"
+              class="close-form-button"
+              id="close-task-form-btn"
+            >
+              <img class="img-close" src="close.png" alt="close" />
+            </button>
+          </div>
+          <div class="task-form-body">
+            <label class="labelStyle" for="title-input">Title</label>
+            <input type="text" id="title-input" class="inputStyle" required />
+            <label class="labelStyle" for="date-input">Date</label>
+            <input type="date" id="date-input" class="inputStyle" />
+            <label class="labelStyle" for="description-input"
+              >Description</label
+            >
+            <textarea
+              name=""
+              id="description-input"
+              cols="30"
+              rows="10"
+              class="inputStyle"
+            ></textarea>
+          </div>
+          <div class="task-form-foorter">
+            <button
+              type="submit"
+              class="btn-add-or-update-task"
+              id="add-or-update-task-btn"
+            >
+              Add Task
+            </button>
+          </div>
+        </form>
+        <dialog id="confirm-close-dialog">
+          <form method="dialog">
+            <p class="discard-message-text">Discard unsaved changes?</p>
+            <div class="confirm-close-dialog-btn-container">
+              <button id="cancel-btn" class="btn" aria-label="cancel">
+                Cancel
+              </button>
+              <button id="discard-btn" class="btn" aria-label="discard">
+                Discard
+              </button>
+            </div>
+          </form>
+        </dialog>
+        <div id="task-container"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- 
+      button add new task - id: open-task-form-btn
+      form id:task-form ->>> div 
+     -->
+  </body>
+</html>
